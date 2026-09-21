@@ -1,0 +1,1 @@
+#templates{max-height:350px;overflow:auto}#templateSearch{width:100%;padding:9px;border:1px solid #cbd7e5;border-radius:8px}#savedDesigns{display:grid;gap:6px;margin-top:8px}#savedDesigns button{font-size:12px}#savedDesigns .saved-row{display:grid;grid-template-columns:1fr auto;gap:5px}.header{flex-wrap:wrap}#exportPdf,#exportSvg{background:#edf4ff}

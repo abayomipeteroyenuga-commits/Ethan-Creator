@@ -45,7 +45,7 @@ $('lock').onclick=()=>{if(selected<0)return;mutate(()=>{selectedItem().locked=!s
 $('toggleVisible').onclick=()=>{if(selected<0)return;mutate(()=>{selectedItem().hidden=!selectedItem().hidden})};
 $('brandApply').onclick=()=>{let e=selectedItem();if(!e||e.locked||e.type==='image')return toast('Select an unlocked text or shape element');mutate(()=>{e.fill=$('brandColor').value})};
 $('brandHeading').onclick=()=>add({type:'text',x:100,y:100,w:Math.max(200,doc.w-200),h:180,text:$('brandName').value.trim()||'YOUR BRAND',fontSize:80,font:'Arial',align:'center',fill:$('brandColor').value});
-$('zoom').onchange=()=>{const z=+$('zoom').value;canvas.style.maxWidth=z===1?'100%':`${Math.round(z*100)}%`;canvas.style.maxHeight=z===1?'70vh':`${Math.round(z*70)}vh`};
+// Canvas sizing and zoom are managed by canvas-workspace.js.
 $('exportJpg').onclick=()=>{selected=-1;render(false);canvas.toBlob(blob=>{if(blob)download(blob,safeName()+'.jpg');else toast('Could not export JPG')},'image/jpeg',0.92);inspect()};
 window.addEventListener('keydown',ev=>{if(['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName))return;if((ev.ctrlKey||ev.metaKey)&&ev.key.toLowerCase()==='d'){ev.preventDefault();$('duplicate').click()}if((ev.ctrlKey||ev.metaKey)&&ev.key.toLowerCase()==='y'){ev.preventDefault();$('redo').click()}if(ev.key.startsWith('Arrow')&&selectedItem()&&!selectedItem().locked){ev.preventDefault();let step=ev.shiftKey?10:1;mutate(()=>{if(ev.key==='ArrowLeft')selectedItem().x-=step;if(ev.key==='ArrowRight')selectedItem().x+=step;if(ev.key==='ArrowUp')selectedItem().y-=step;if(ev.key==='ArrowDown')selectedItem().y+=step})}});
 refreshLayers();
