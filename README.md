@@ -1,9 +1,10 @@
-# Ethan Creator — Graphic Design Studio v2
+# Ethan Creator v4 — Design + Video
 
-A static, browser-based editor. Open `index.html` to preview locally or deploy the repository root to Vercel (Other framework; no build command). No API keys or backend required.
+Open `index.html` for the new home page. Choose **Get Started**, then **Design Studio** (`design.html`) or **Video Studio** (`video.html`).
 
-Features: poster/flyer/social/logo templates; editable text, images, rectangle, circle, line, triangle and star; canvas resizing presets; layer ordering, selection, locking and visibility; colour, opacity, rotation, typography, positioning, dragging and resizing; brand name/colour controls; undo/redo; PNG/JPG export; JSON project save/open.
+## Deploy
+Upload the **extracted contents** of this ZIP to your GitHub repository root. Import the repository in Vercel as a static site (no build command required). Keep the `assets` folder.
 
-Shortcuts: Delete removes selection; Ctrl/Cmd+Z undo; Ctrl/Cmd+Y redo; Ctrl/Cmd+D duplicate; arrow keys nudge selection (Shift = 10px).
-
-Limitations: Local-only editor; brand settings do not sync; no AI generation, collaboration, SVG export, server storage, or photo background removal. Rotated element hit-testing and selection bounds use the unrotated rectangle. Browser storage is not used for projects; download JSON to retain your work.
+## Current capabilities and limits
+Design Studio: editable templates, shapes, text, images, layers, brand colours, PNG/JPG exports and editable JSON project files.
+Video Studio: local video uploads, clip ordering and trimming, text overlays, preview and silent WebM export in browsers that support MediaRecorder. MP4, audio mixing, AI generation, accounts and cloud storage are not implemented. Large video projects may exceed browser memory. The video edit-plan JSON does not include source video files; reselect the clips after reopening it.
